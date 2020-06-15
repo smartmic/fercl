@@ -4,3 +4,5 @@ SUBDIRS = lib
 
 bin_PROGRAMS = src/fercl
 src_fercl_SOURCES = src/fercl.c
+src_fercl_CPPFLAGS = -I$(top_builddir)/lib -I$(top_srcdir)/lib
+src_fercl_LDADD = lib/libgnu.a
