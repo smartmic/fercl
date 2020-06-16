@@ -6,6 +6,8 @@
 #include <errno.h>
 #include <unistd.h>
 
+#include <sodium.h>
+
 #include "base64.h"
 
 #define BUF_GROW 1024
@@ -94,6 +96,11 @@ int main(int argc, char *argv[])
   int c;
   bool tob64 = true;
 
+  if (sodium_init() == -1)
+    {
+      return 1;
+    }
+  
   while ((c = getopt(argc, argv, "dh")) != -1)
     {
       switch (c)

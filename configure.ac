@@ -13,8 +13,10 @@ AC_PROG_CC
 gl_EARLY
 
 # Checks for libraries.
+AC_SEARCH_LIBS([sodium_init],[sodium])
 
 # Checks for header files.
+AC_CHECK_HEADERS([stdio.h stdlib.h string.h stdbool.h errno.h unistd.h sodium.h])
 
 # Initialize Gnulib.
 gl_INIT
