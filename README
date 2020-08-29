@@ -1,3 +1,5 @@
+*WORK IN PROGRESS* 
+*ENCRYPTION NOT YET IMPLEMENTED*
 fercl — fast encryption for the command line.
 fercl is a program that converts data to and from encrypted base64 strings.
 Acting like a Unix filter, it uses stdin and stdout for input and output
